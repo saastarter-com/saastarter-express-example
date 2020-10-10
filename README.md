@@ -13,7 +13,7 @@ It supports
 
 A Firebase Service account is required for this project. See this [Stackoverflow question](https://stackoverflow.com/a/40799378) on how to obtain a `service-account.json`.
 
-### Run it
+## Run it
 
 1. Get a Firebase service account. Place `service-account.json` in the root of this project.
 
@@ -30,7 +30,7 @@ npm run dev
 
 4. Open [localhost:8000](http://localhost:8000).
 
-### Example API
+## Example API
 
 [src/index.js](src/index.js) contains three examples which illustrate how to use the server in connection to SaaStarter.
 
@@ -41,7 +41,7 @@ Route **/auth-required** checks if request is authenticated by providing a Berea
 
 Route **/subscriptions** reads the subscriptions of the authenticated user.
 
-### Call API from Nuxt
+## Call API from Nuxt
 
 > This example uses the [@nuxtjs/axios](https://axios.nuxtjs.org/) module.
 
@@ -60,8 +60,9 @@ const response = await this.$axios.get(
 console.log("response", response.data);
 ```
 
+## Notes
 
 For more information checkout
 
-- [saastaarter.com](https://saastareter.com]
+- [saastaarter.com](https://saastareter.com)
 - [SaaStarter documentation](https://docs.saastarter.com)
