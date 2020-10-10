@@ -52,10 +52,16 @@ const userToken = await this.$fireAuth.currentUser.getIdToken(true);
 const response = await this.$axios.get(
   "http://localhost:8000/auth-required",
   {
-  headers: {
-    authorization: "Bearer " + userToken,
-  },
-}
+    headers: {
+      authorization: "Bearer " + userToken,
+    },
+  }
 );
 console.log("response", response.data);
 ```
+
+
+For more information checkout
+
+- [saastaarter.com](https://saastareter.com]
+- [SaaStarter documentation](https://docs.saastarter.com)
