@@ -20,7 +20,19 @@ app.get('/', async (req, res) => {
 });
 
 app.get('/auth-required', authenticationRequired, async (req, res) => {
-    res.send('This request was authentication by ' + req.user.email + '.')
+    // Only works if the user is authenticated with the authorization header.
+    res.send('This request was authentication by ' + req.user.email + '. User uid: ' + req.user.uid);    
+});
+
+app.get('/subscriptions', authenticationRequired, async (req, res) => {
+    // Returns all subscriptions saved in fireStore for the user.
+    const subs = await db.collection('users').doc(req.user.uid).collection('subscriptions').get();
+    if (subs.empty) {
+        res.send('No subscriptions found for ' + req.user.email + '.');
+        return;
+    }
+    const docs = subs.docs.map((doc) => doc.data());
+    res.json(docs);
 });
 
 app.listen(port, () => {

@@ -6,8 +6,7 @@ const serviceAccount = JSON.parse(
 );
 
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://saaskit-nuxtjs.firebaseio.com",
+  credential: admin.credential.cert(serviceAccount)
 });
 
 export const db = admin.firestore();
