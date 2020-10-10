@@ -36,7 +36,7 @@ npm run dev
 [src/index.js](src/index.js) contains three examples which illustrate how to use the server in connection to SaaStarter.
 
 
-Route **/** check if express can read from FireStore.
+Route **/** checks if express can read from FireStore.
 
 Route **/auth-required** checks if request is authenticated by providing a Berear token. See below.
 
