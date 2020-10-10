@@ -1,6 +1,8 @@
 # SaaStarter ExpressJs example
 
-This repository provides an example on how to use SaaStarter with a custom NodeJs backend.
+
+
+This repository provides an example on how to use [SaaStarter.com](https://saastarter.com) with a custom NodeJs backend.
 It supports
 
 - FireStore access
@@ -28,9 +30,32 @@ npm run dev
 
 4. Open [localhost:8000](http://localhost:8000).
 
-### Examples
+### Example API
 
 [src/index.js](src/index.js) contains three examples which illustrate how to use the server in connection to SaaStarter.
 
 
-** / **
+Route **/** check if express can read from FireStore.
+
+Route **/auth-required** checks if request is authenticated by providing a Berear token. See below.
+
+Route **/subscriptions** reads the subscriptions of the authenticated user.
+
+### Call API from Nuxt
+
+> This example uses the [@nuxtjs/axios](https://axios.nuxtjs.org/) module.
+
+Send an authenticated request to the node server.
+
+```js
+const userToken = await this.$fireAuth.currentUser.getIdToken(true);
+const response = await this.$axios.get(
+  "http://localhost:8000/auth-required",
+  {
+  headers: {
+    authorization: "Bearer " + userToken,
+  },
+}
+);
+console.log("response", response.data);
+```
