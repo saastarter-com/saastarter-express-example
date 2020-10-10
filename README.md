@@ -18,13 +18,14 @@ A Firebase Service account is required for this project. See this [Stackoverflow
 1. Get a Firebase service account. Place `service-account.json` in the root of this project.
 
 2. Install dependencies.
+
 ```bash
 npm install
 ```
 
 3. Run server.
+
 ```bash
-# Run the server
 npm run dev
 ```
 
