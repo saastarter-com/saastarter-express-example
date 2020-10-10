@@ -13,7 +13,7 @@ A Firebase Service account is required for this project. See this [Stackoverflow
 
 ### Run it
 
-1. Get a Firebase service account and place it in the root of this project with the name `service-account.json`.
+1. Get a Firebase service account. Place `service-account.json` in the root of this project.
 
 2. Install dependencies.
 ```bash
@@ -28,3 +28,9 @@ npm run dev
 
 4. Open [localhost:8000](http://localhost:8000).
 
+### Examples
+
+[src/index.js](src/index.js) contains three examples which illustrate how to use the server in connection to SaaStarter.
+
+
+** / **
