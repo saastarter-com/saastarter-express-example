@@ -38,7 +38,7 @@ npm run dev
 
 Route **/** checks if express can read from FireStore.
 
-Route **/auth-required** checks if request is authenticated by providing a Berear token. See below.
+Route **/auth-required** checks if request is authenticated by providing a Bearer token. See below.
 
 Route **/subscriptions** reads the subscriptions of the authenticated user.
 
