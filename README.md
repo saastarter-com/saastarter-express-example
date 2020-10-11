@@ -1,8 +1,8 @@
-# SaaStarter ExpressJs example
+# SaaStarter Node.js example
 
 
 
-This repository provides an example on how to use [SaaStarter.com](https://saastarter.com) with a custom NodeJs backend.
+This repository provides an example on how to use [SaaStarter.com](https://saastarter.com) with a custom Node.js backend.
 It supports
 
 - FireStore access
